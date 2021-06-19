@@ -2,7 +2,7 @@ import React from 'react';
 import  {View, Text, StyleSheet, ImageBackground, Image} from 'react-native';
 
 
-function WelcomeScreen(props) {
+function WelcomeScreen({navigation}) {
     return (
         <View style={styles.container}>
             
@@ -15,7 +15,7 @@ function WelcomeScreen(props) {
                 <Text style={styles.lowerText}>Login</Text>
             </View>
             <View style={styles.register}>
-                <Text style={styles.lowerText}>Register</Text>
+                <Text style={styles.lowerText}  onPress={()=>navigation.navigate("Register")}>Register</Text>
             </View>
 
         </View>
